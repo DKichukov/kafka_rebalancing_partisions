@@ -1,0 +1,11 @@
+# Generate single message
+curl -X POST http://localhost:8080/api/kafka/generate/single
+
+# Generate multiple messages
+curl -X POST http://localhost:8080/api/kafka/generate/multiple/5
+
+# Send custom message with key
+curl -X POST "http://localhost:8080/api/kafka/send?key=user123&message=custom_event"
+
+# Send custom message without key
+curl -X POST "http://localhost:8080/api/kafka/send?message=custom_event"
